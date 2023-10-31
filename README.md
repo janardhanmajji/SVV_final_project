@@ -66,7 +66,3 @@ Tests to be done:
 
 14. Check the back-home button
 
-
-Steps to create Cucumber Project:
-
-
