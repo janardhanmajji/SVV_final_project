@@ -25,7 +25,7 @@ public class Test
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
-		// open the web app
+		
 		driver.navigate().to("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
 		String title = driver.getTitle();
