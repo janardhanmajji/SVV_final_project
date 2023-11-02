@@ -15,10 +15,7 @@ import io.cucumber.java.en.When;
 
 public class LoginSteps
 {
-	
-	
 	 private  WebDriver driver;
-	
 	
 	@Given("user is on login page")
 	public void user_is_on_login_page() 

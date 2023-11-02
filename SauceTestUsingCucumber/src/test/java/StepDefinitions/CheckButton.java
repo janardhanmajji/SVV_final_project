@@ -13,7 +13,6 @@ import io.cucumber.java.en.*;
 
 public class CheckButton 
 {
-	
 	 private  WebDriver driver;
 	
 	@Given("user is on home page")
