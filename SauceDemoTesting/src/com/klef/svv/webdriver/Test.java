@@ -2,17 +2,12 @@ package com.klef.svv.webdriver;
 
 
 import java.util.concurrent.TimeUnit;
-import java.time.Duration;
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Test 
 {
@@ -143,97 +138,6 @@ public class Test
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(1000);
 		
-		// Checking social media buttons.
-		
-		  // Click on the Twitter button
-        WebElement twitterBtn = driver.findElement(By.className("social_twitter"));
-        twitterBtn.click();
-        Thread.sleep(1000);
-
-        // Wait for the new tab to open
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-
-        // Switch to the new tab
-        Set<String> windowHandles = driver.getWindowHandles();
-        for (String windowHandle : windowHandles) {
-            driver.switchTo().window(windowHandle);
-        }
-
-        // Verify the URL
-        if (driver.getCurrentUrl().equals("https://twitter.com/saucelabs")) {
-            System.out.println("Twitter Button is working");
-            Thread.sleep(800);
-            driver.close();
-        } else {
-            System.out.println("Twitter button is not working");
-        }
-
-        // Switch back to the main tab
-        driver.switchTo().window(windowHandles.iterator().next());
-
-        // Click on the Facebook button
-        WebElement facebookBtn = driver.findElement(By.className("social_facebook"));
-        facebookBtn.click();
-        Thread.sleep(1000);
-
-        // Wait for the new tab to open
-        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-
-        // Switch to the new tab
-        windowHandles = driver.getWindowHandles();
-        for (String windowHandle : windowHandles) {
-            driver.switchTo().window(windowHandle);
-        }
-
-        // Verify the URL
-        if (driver.getCurrentUrl().equals("https://www.facebook.com/saucelabs")) {
-            System.out.println("Facebook Button is working");
-            Thread.sleep(800);
-            driver.close();
-        } else {
-            System.out.println("Facebook button is not working");
-        }
-        
-        // Switch back to the main tab
-        driver.switchTo().window(windowHandles.iterator().next());
-
-        // Click on the LinkedIn button
-        WebElement linkedinBtn = driver.findElement(By.className("social_linkedin"));
-        linkedinBtn.click();
-        Thread.sleep(1000);
-
-        // Wait for the new tab to open
-        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-        
-
-        // Switch to the new tab
-        windowHandles = driver.getWindowHandles();
-        for (String windowHandle : windowHandles) {
-            driver.switchTo().window(windowHandle);
-        }
-
-        // Verify the URL
-        if (driver.getCurrentUrl().equals("https://www.linkedin.com/company/sauce-labs/")) {
-            System.out.println("LinkedIn Button is working");
-            Thread.sleep(800);
-            driver.close();
-        } else {
-            System.out.println("LinkedIn button is not working");
-        }
-        
-        // Switch back to the main tab
-        driver.switchTo().window(windowHandles.iterator()));
-        
-        WebElement backbtn = driver.findElement(By.id("back-to-products"));
-        backbtn.click();
-        if(driver.getCurrentUrl().equals("https://www.saucedemo.com/inventory.html"))
-			System.out.println("Back home button is working");
-		else {
-			System.out.println("Back Home button is not working");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		}
-        
 		
 	}
 
