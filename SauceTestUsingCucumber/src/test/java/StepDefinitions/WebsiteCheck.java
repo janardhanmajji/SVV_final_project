@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+
 
 public class WebsiteCheck 
 {
@@ -42,8 +44,6 @@ public class WebsiteCheck
 	public void user_is_navigated_to_sauce_demo_website() 
 	{
 		driver.getPageSource().contains("Swag Labs");
-		driver.close();
-		driver.quit();
 	}
 
 

@@ -223,7 +223,7 @@ public class Test
         }
         
         // Switch back to the main tab
-        driver.switchTo().window(windowHandles.iterator().next());
+        driver.switchTo().window(windowHandles.iterator()));
         
         WebElement backbtn = driver.findElement(By.id("back-to-products"));
         backbtn.click();
