@@ -15,12 +15,6 @@ public class FinalCheckout
 {
 	public WebDriver driver;
 	
-	@After
-	public void quit()
-	{
-		driver.close();
-		driver.quit();
-	}
 	
 	@Given("user is on checkoutstep2")
 	public void user_is_on_checkoutstep2() throws InterruptedException 
@@ -100,6 +94,8 @@ public class FinalCheckout
 	public void user_is_navigated_to_checkout_complete()
 	{
 		Assert.assertEquals("https://www.saucedemo.com/checkout-complete.html", driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
 	}
 
 

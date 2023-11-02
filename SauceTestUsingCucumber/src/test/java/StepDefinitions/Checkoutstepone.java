@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 public class Checkoutstepone
@@ -102,6 +103,8 @@ public class Checkoutstepone
 	public void user_is_navigated_to_checkout_step2() 
 	{
 		Assert.assertEquals("https://www.saucedemo.com/checkout-step-two.html", driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
 	}
 
 

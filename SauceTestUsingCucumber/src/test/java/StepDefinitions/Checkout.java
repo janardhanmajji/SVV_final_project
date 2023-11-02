@@ -8,11 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 public class Checkout 
 {
 	private  WebDriver driver;
+	
 	
 	@Given("user is on cart page")
 	public void user_is_on_cart_page() throws InterruptedException
@@ -73,6 +75,8 @@ public class Checkout
 	public void user_is_navigated_to_checkout_step1()
 	{
 		Assert.assertEquals("https://www.saucedemo.com/checkout-step-one.html", driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
 	}
 
 

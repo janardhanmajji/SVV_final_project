@@ -8,10 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 public class CheckButton 
 {
+	
 	 private  WebDriver driver;
 	
 	@Given("user is on home page")
@@ -74,6 +76,8 @@ public class CheckButton
 	public void user_is_navigated_to_cart_page() 
 	{
 		Assert.assertEquals("https://www.saucedemo.com/cart.html", driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
 	}
 
 
